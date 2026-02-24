@@ -168,3 +168,118 @@ $$
 $$
 !0 = 1, \quad !1 = 0
 $$
+
+
+---
+
+# Fórmula general (no recursiva)
+
+Aplicando el principio de inclusión–exclusión:
+
+$$
+!n = n! \sum_{k=0}^{n} \frac{(-1)^k}{k!}
+$$
+
+---
+
+## Demostración por inclusión–exclusión
+
+Sea $A_i$ el conjunto de permutaciones con $i$ fijo:
+
+$$
+A_i = \{ \pi : \pi(i) = i \}
+$$
+
+Queremos contar:
+
+$$
+!n = n! - \left| \bigcup_{i=1}^{n} A_i \right|
+$$
+
+---
+
+### Intersecciones
+
+Si fijamos $k$ posiciones:
+
+$$
+\left| A_{i_1} \cap \cdots \cap A_{i_k} \right| = (n-k)!
+$$
+
+Hay:
+
+$$
+\binom{n}{k}
+$$
+
+formas de elegirlas.
+
+---
+
+### Inclusión–exclusión
+
+$$
+!n = \sum_{k=0}^{n} (-1)^k \binom{n}{k} (n-k)!
+$$
+
+Factorizando:
+
+$$
+\binom{n}{k}(n-k)! = \frac{n!}{k!}
+$$
+
+obtenemos:
+
+$$
+!n = n! \sum_{k=0}^{n} \frac{(-1)^k}{k!}
+$$
+
+---
+
+# Aproximación asintótica
+
+Como:
+
+$$
+e^{-1} = \sum_{k=0}^{\infty} \frac{(-1)^k}{k!}
+$$
+
+se sigue que:
+
+$$
+!n \approx \frac{n!}{e}
+$$
+
+Más precisamente:
+
+$$
+!n = \left\lfloor \frac{n!}{e} + \frac{1}{2} \right\rfloor
+$$
+
+---
+
+# Valores pequeños
+
+$$
+!1 = 0
+$$
+
+$$
+!2 = 1
+$$
+
+$$
+!3 = 2
+$$
+
+$$
+!4 = 9
+$$
+
+$$
+!5 = 44
+$$
+
+$$
+!6 = 265
+$$
