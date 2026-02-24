@@ -51,7 +51,7 @@ es un desarreglo de $ n-2 $ elementos.
 Por tanto:
 
 $$
-\#(\text{Caso A}) = !(n-2)
+|\text{Caso A}| = !(n-2)
 $$
 
 ---
